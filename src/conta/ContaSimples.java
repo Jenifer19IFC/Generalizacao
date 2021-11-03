@@ -34,6 +34,10 @@ public class ContaSimples extends Conta {
 		}
 		return false;
 	}
+	/*Para saldo total:
+	public double total() {
+		return getSaldo() + getSaldopoupanca();
+	}*/
 	
 	@Override
 	public String toString() {
