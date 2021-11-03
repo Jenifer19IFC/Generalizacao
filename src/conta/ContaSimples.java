@@ -46,8 +46,4 @@ public class ContaSimples extends Conta {
 		return builder.toString();
 	}
 	
-	public double total() {
-		return getSaldo() + getSaldopoupanca();
-	}
-	
 }

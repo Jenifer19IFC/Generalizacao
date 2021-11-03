@@ -31,11 +31,4 @@ public class ContaEspecial extends Conta {
 		return builder.toString();
 	}
 
-	
-
-	
-	
-	
-
-	
 }
