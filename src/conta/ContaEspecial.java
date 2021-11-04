@@ -17,7 +17,18 @@ public class ContaEspecial extends Conta {
 	}
 
 	public void setLimite(double limite) {
-		this.limite = limite;
+			this.limite = limite;
+	}
+
+	public double total() {
+		return saldo + limite;	
+	}
+	
+	public boolean saqueLimite(double valor) {
+		if(valor <= total())
+			return true;
+		else
+			return false;
 	}
 
 	@Override
@@ -30,5 +41,10 @@ public class ContaEspecial extends Conta {
 		builder.append("]");
 		return builder.toString();
 	}
+
+	
+	
+	
+	
 
 }

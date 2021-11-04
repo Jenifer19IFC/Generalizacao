@@ -21,9 +21,10 @@ public class ContaMain {
 				System.out.println(cs);
 				
 				//Conta Especial
-				ContaEspecial ce = new ContaEspecial("Itaú", 890, 891, 1000, 1000);
-				
+				ContaEspecial ce = new ContaEspecial("Itaú", 890, 891, 5000, 1000);
 				System.out.println(ce);
+				System.out.println("Disponível para saque (com limite) " + ce.total());
+				System.out.println("Saque: " + ce.saqueLimite(6001));
 			}
 
 		}	

@@ -5,7 +5,7 @@ public class Conta {
 	private String banco;
 	private int agencia;
 	private int numeroconta;
-	private double saldo;
+	protected double saldo;
 	
 	public Conta (String banco, int agencia, int numeroconta, double saldo) { //Construtor
 		setBanco(banco);
