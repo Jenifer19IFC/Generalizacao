@@ -3,13 +3,23 @@ package conta;
 public class ContaEspecial extends Conta {
 
 	private double limite;
-
+	private double saldolimite;
+	
 	public ContaEspecial (String banco, int agencia, int numeroconta, double saldo, double limite) { //Construtor
 		super (banco, agencia, numeroconta, saldo);
 		setLimite(limite);
 	}
 	
 	public ContaEspecial() {  //Construtor		
+	}
+
+
+	public double getSaldolimite() {
+		return saldolimite;
+	}
+
+	public void setSaldolimite(double saldolimite) {
+		this.saldolimite = saldolimite;
 	}
 
 	public double getLimite() {
@@ -21,13 +31,14 @@ public class ContaEspecial extends Conta {
 	}
 
 	public double total() {
-		return saldo + limite;	
+		return saldolimite = (saldo + limite);	
 	}
 	
-	public boolean saqueLimite(double valor) {
-		if(valor <= total())
+	public boolean saqueEspecial(double valor) {
+		if(valor <= getSaldolimite() && valor > 0) {
+			setSaldolimite(getSaldolimite() - valor);
 			return true;
-		else
+		}else
 			return false;
 	}
 
